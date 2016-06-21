@@ -21,9 +21,4 @@ RUN set -ex \
     && apk del --purge $SS_DEP \
     && rm -rf /var/cache/apk/*
 
-ENV SERVER_PORT 8388
-
-EXPOSE $SERVER_PORT/tcp
-EXPOSE $SERVER_PORT/udp
-
 ENTRYPOINT ["ss-server"]
